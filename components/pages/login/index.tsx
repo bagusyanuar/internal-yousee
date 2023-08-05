@@ -2,8 +2,10 @@ import Image from 'next/image'
 import Card from '../../card'
 import Textfield from '../../form/textfield'
 import Button from '../../form/button'
+import { useRouter} from 'next/router'
 
 function Index() {
+    const router = useRouter();
     return (
         <main className="h-screen">
             <div className='flex w-full h-full'>
@@ -30,8 +32,8 @@ function Index() {
                                 placeholder='Password'
                             />
                             <div className='flex justify-end'>
-                                <Button onClick={() => { }}>
-                                    <span>Sign In</span>
+                                <Button onClick={() => { router.push('/dashboard') }}>
+                                    <span className='tracking-wider'>Sign In</span>
                                 </Button>
                             </div>
                         </div>
