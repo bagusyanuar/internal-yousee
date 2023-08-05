@@ -20,7 +20,7 @@ function Textfield({
             placeholder={placeholder}
             type={type}
             value={value}
-            className={`text-sm form-input rounded-md border border-slate-400 py-2 px-2.5 bg-white placeholder-gray-400 text-gray-500 appearance-none w-full block focus:outline-none focus:border-slate-500 ${className}`} />
+            className={`form-input rounded-md border border-slate-200 py-2.5 px-3 bg-white placeholder-gray-400 text-gray-500 appearance-none w-full block focus:outline-none focus:border-slate-300 ${className}`} />
   )
 }
 
