@@ -1,5 +1,7 @@
 import React from 'react'
+import Image from 'next/image'
 import { TextfieldPrefixIcon } from '../../form/textfield'
+import MyCard from '../../card'
 
 function Index() {
   return (
@@ -44,6 +46,37 @@ function Index() {
             />
           </div> */}
         </div>
+      </div>
+
+      <div className='grid grid-cols-3 gap-4'>
+          <MyCard className='py-4 px-4'>
+            <div className='w-full flex items-center'>
+              <Image src={`/assets/avatar.png`} alt='vendor-image' width={70} height={70} className='rounded-full mr-3'/>
+              <div className='w-full flex flex-col'>
+                <span className='font-bold overflow-ellipsis line-clamp-1 text-slate-700'>CV. Deras Advertising</span>
+                <span className='font-light text-xs overflow-ellipsis line-clamp-2 text-slate-500 leading-4'>Jl. Gunung Kelud II / 7 Dukuhan, Jl. Nayu, Kadipiro, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57136</span>
+              </div>
+            </div>
+            <hr className='mt-3 mb-3'/>
+          </MyCard>
+          <MyCard className='py-4 px-4'>
+            <div>abc</div>
+          </MyCard>
+          <MyCard className='py-4 px-4'>
+            <div>abc</div>
+          </MyCard>
+          <MyCard className='py-4 px-4'>
+            <div>abc</div>
+          </MyCard>
+          <MyCard className='py-4 px-4'>
+            <div>abc</div>
+          </MyCard>
+          <MyCard className='py-4 px-4'>
+            <div>abc</div>
+          </MyCard>
+          <MyCard className='py-4 px-4'>
+            <div>abc</div>
+          </MyCard>
       </div>
     </main>
   )
