@@ -16,7 +16,7 @@ function Index({ children }: { children: React.ReactNode }) {
                     <SidebarItem icon='grid_view' title='Dashboard' link='/dashboard' active={path.startsWith('/dashboard')} />
                     <SidebarItem icon='groups' title='Vendor' link='/vendor' active={path.startsWith('/vendor')} />
                     <SidebarItem icon='style' title='Tipe' link='/type' active={path.startsWith('/type')} />
-                    <SidebarItem icon='place' title='Titik Iklan' link='/item' active={false} />
+                    <SidebarItem icon='place' title='Titik Iklan' link='/advert-location' active={path.startsWith('/advert-location')} />
                     <SidebarItem icon='account_tree' title='Project' link='/project' active={false} />
                 </div>
                 <div className='w-full rounded-md bg-white shadow-md p-2 lg:p-3 flex flex-col'>
