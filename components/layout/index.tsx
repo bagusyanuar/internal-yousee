@@ -15,7 +15,7 @@ function Index({ children }: { children: React.ReactNode }) {
                 <div className='flex-grow'>
                     <SidebarItem icon='grid_view' title='Dashboard' link='/dashboard' active={path.startsWith('/dashboard')} />
                     <SidebarItem icon='groups' title='Vendor' link='/vendor' active={path.startsWith('/vendor')} />
-                    <SidebarItem icon='style' title='Tipe' link='/type' active={path.startsWith('/type')} />
+                    <SidebarItem icon='style' title='Tipe Media' link='/type' active={path.startsWith('/type')} />
                     <SidebarItem icon='place' title='Titik Iklan' link='/advert-location' active={path.startsWith('/advert-location')} />
                     <SidebarItem icon='account_tree' title='Project' link='/project' active={false} />
                 </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import MyCard from '../../card'
 
 function Index() {
     return (
@@ -27,6 +28,9 @@ function Index() {
                     </nav>
                 </div>
             </div>
+            <MyCard className='py-4 px-4 w-100'>
+
+            </MyCard>
         </main>
     )
 }
