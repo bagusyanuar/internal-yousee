@@ -33,7 +33,7 @@ function Breadcrumbs({
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                                     </svg>
                                     <a href={e.link} className="inline-flex items-center text-sm font-semibold text-gray-400 hover:text-mainshade">
-                                        {e.icon !== undefined ? <span className='material-icons-round mr-2'>{e.icon}</span> : ''}
+                                        {e.icon !== undefined ? <span className='material-icons-round mr-2 ml-2'>{e.icon}</span> : ''}
                                         {e.title}
                                     </a>
                                 </li>
@@ -45,8 +45,8 @@ function Breadcrumbs({
                                     <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                                     </svg>
-                                    {e.icon !== undefined ? <span className='material-icons-round mr-2'>{e.icon}</span> : ''}
-                                    <span className="ml-1 text-sm font-semibold text-gray-400 md:ml-2 dark:text-gray-400">{e.title}</span>
+                                    {e.icon !== undefined ? <span className='material-icons-round mr-2 ml-2 text-gray-400'>{e.icon}</span> : ''}
+                                    <span className="ml-1 text-sm font-semibold text-gray-400 dark:text-gray-400">{e.title}</span>
                                 </div>
                             </li>
                         )
