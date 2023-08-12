@@ -9,7 +9,7 @@ function Breadcrumbs({
             <ol className="inline-flex items-center space-x-1 md:space-x-3">
                 {
                     items.length > 1 ? <li className="inline-flex items-center">
-                        <a href={items[0].link} className="inline-flex items-center text-sm font-semibold text-gray-400 hover:text-mainshade">
+                        <a href={items[0].link} className="inline-flex items-center text-sm text-gray-400 hover:text-mainshade">
                             {items[0].icon !== undefined ? <span className='material-icons-round mr-2'>{items[0].icon}</span> : ''}
                             {items[0].title}
                         </a>
@@ -32,7 +32,7 @@ function Breadcrumbs({
                                     <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                                     </svg>
-                                    <a href={e.link} className="inline-flex items-center text-sm font-semibold text-gray-400 hover:text-mainshade">
+                                    <a href={e.link} className="inline-flex items-center text-sm text-gray-400 hover:text-mainshade">
                                         {e.icon !== undefined ? <span className='material-icons-round mr-2 ml-2'>{e.icon}</span> : ''}
                                         {e.title}
                                     </a>
@@ -46,7 +46,7 @@ function Breadcrumbs({
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                                     </svg>
                                     {e.icon !== undefined ? <span className='material-icons-round mr-2 ml-2 text-gray-400'>{e.icon}</span> : ''}
-                                    <span className="ml-1 text-sm font-semibold text-gray-400 dark:text-gray-400">{e.title}</span>
+                                    <span className="ml-1 text-sm font-lighttext-gray-400 dark:text-gray-400">{e.title}</span>
                                 </div>
                             </li>
                         )

@@ -1,5 +1,10 @@
 import React from 'react'
 import MyCard from '../../card'
+import MyTable, { HeaderType } from '../../table'
+
+const headers: Array<HeaderType> = [
+    { value: 'Email', className: 'w-1/5', childClassName: 'justify-center' },
+];
 
 function Index() {
     return (
@@ -29,7 +34,48 @@ function Index() {
                 </div>
             </div>
             <MyCard className='py-4 px-4 w-100'>
-
+                <div className='relative overflow-auto shadow-md sm:rounded-lg border border-slate-200 mb-2'>
+                    <table className='rounded-md overflow-x-scroll w-full text-sm text-left text-gray-500 dark:text-gray-400'>
+                        <thead className="text-sm text-slate-600 bg-gray-50">
+                            <tr>
+                                <td className={`px-6 py-3 w-1 text-center font-semibold`}>
+                                    <span>#</span>
+                                </td>
+                                <td className={`px-6 py-3 w-1/5 text-left font-semibold`}>
+                                    <span>Nama</span>
+                                </td>
+                                <td className={`px-6 py-3 w-1/5 text-left font-semibold`}>
+                                    <span>Vendor</span>
+                                </td>
+                                <td className={`px-6 py-3 text-left font-semibold`}>
+                                    <span>Alamat</span>
+                                </td>
+                                <td className={`px-6 py-3 w-2 text-left font-semibold`}>
+                                    <span>Posisi</span>
+                                </td>
+                                <td className={`px-6 py-3 w-2 text-left font-semibold`}>
+                                    <span>Dimensi</span>
+                                </td>
+                                <td className={`px-6 py-3 w-2 text-left font-semibold`}>
+                                    <span>Aksi</span>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr className='bg-white border-b'>
+                                <td className={`px-6 py-3 text-gray-500 whitespace-nowrap w-1`}>
+                                    1
+                                </td>
+                                <td className={`px-6 py-3 text-gray-500 whitespace-nowrap w-1`}>
+                                    <span>Baliho Depan UNSA</span>
+                                </td>
+                                <td className={`px-6 py-3 text-gray-500 whitespace-nowrap w-1`}>
+                                    <span>MADE Digital Printing</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </MyCard>
         </main>
     )

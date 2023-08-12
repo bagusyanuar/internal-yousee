@@ -1,3 +1,4 @@
+import Table from './table'
 
 export type HeaderType = { value: string, className?: string | undefined, sort?: boolean | undefined, childClassName?: string }
 export type RowType = { original: any, row: Array<any> }
@@ -16,3 +17,5 @@ export interface PaginationProps {
     onFirstPageChange: () => void,
     onLastPageChange: () => void
 }
+
+export default Table
