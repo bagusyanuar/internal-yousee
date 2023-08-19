@@ -8,7 +8,7 @@ import { Dropdown } from 'flowbite-react'
 
 function Index() {
     return (
-        <main className='w-full py-5 px-5'>
+        <main className='w-full py-5 px-5 relative'>
             <div className='flex items-center mb-3'>
                 <div className='w-full flex items-center justify-between'>
 
@@ -50,7 +50,7 @@ function Index() {
                     </select>
                     <span className='text-sm text-slate-600 ms-2'>entries</span>
                 </div>
-                <div className='relative overflow-x-auto shadow-md sm:rounded-lg border border-slate-200 mb-2'>
+                <div className='overflow-x-auto shadow-md sm:rounded-lg border border-slate-200 mb-2'>
                     <table className='rounded-md overflow-x-scroll w-full text-left text-gray-500 dark:text-gray-400'>
                         <thead className="text-xs text-slate-600 bg-gray-50">
                             <tr>
@@ -104,7 +104,8 @@ function Index() {
                                     <span className='overflow-ellipsis line-clamp-3 text-center'>3.5</span>
                                 </td>
                                 <td className='px-3 py-3 text-center text-gray-500'>
-                                    <div className='flex items-center w-full justify-center'>
+                                <DropdownAction />
+                                    {/* <div className='flex items-center w-full justify-center'>
                                         <a href='#' className='flex items-center btn-delete border rounded-md border-main px-2 py-1 text-main hover:text-red-500 mr-1'>
                                             <span className="material-icons-round text-xs">
                                                 collections
@@ -121,7 +122,7 @@ function Index() {
                                             </span>
                                         </a>
 
-                                    </div>
+                                    </div> */}
                                 </td>
                             </tr>
                             <tr className='bg-white border-b'>
@@ -147,6 +148,7 @@ function Index() {
                                     <span className='overflow-ellipsis line-clamp-3 text-center'>3.5</span>
                                 </td>
                                 <td className='px-3 py-3 text-center text-gray-500'>
+                                    <DropdownAction />
                                 </td>
                             </tr>
                         </tbody>
