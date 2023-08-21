@@ -8,7 +8,7 @@ import { Dropdown } from 'flowbite-react'
 
 function Index() {
     return (
-        <main className='w-full py-5 px-5 relative'>
+        <main className='w-full py-5 px-5'>
             <div className='flex items-center mb-3'>
                 <div className='w-full flex items-center justify-between'>
 
