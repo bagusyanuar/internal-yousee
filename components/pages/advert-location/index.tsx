@@ -104,7 +104,7 @@ function Index() {
                                     <span className='overflow-ellipsis line-clamp-3 text-center'>3.5</span>
                                 </td>
                                 <td className='px-3 py-3 text-center text-gray-500'>
-                                <DropdownAction />
+                                <DropdownAction index={1}/>
                                     {/* <div className='flex items-center w-full justify-center'>
                                         <a href='#' className='flex items-center btn-delete border rounded-md border-main px-2 py-1 text-main hover:text-red-500 mr-1'>
                                             <span className="material-icons-round text-xs">
@@ -148,7 +148,7 @@ function Index() {
                                     <span className='overflow-ellipsis line-clamp-3 text-center'>3.5</span>
                                 </td>
                                 <td className='px-3 py-3 text-center text-gray-500'>
-                                    <DropdownAction />
+                                    <DropdownAction index={2}/>
                                 </td>
                             </tr>
                         </tbody>

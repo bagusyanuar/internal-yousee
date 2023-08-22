@@ -11,11 +11,16 @@ function useOuterClick(callback: () => void): any {
                 | HTMLInputElement
                 | HTMLParagraphElement
                 | HTMLButtonElement
+                | HTMLSpanElement
                 | HTMLHeadingElement;
             // console.log('contains', target?.contains(innerRef.current));
-            // console.log('not same',target !== innerRef.current);
+            console.log('not same',target !== innerRef.current);
+            console.log(target, innerRef.current);
 
-            if ((target?.contains(innerRef.current) && target !== innerRef.current)) {
+            // if ((target?.contains(innerRef.current) && target !== innerRef.current)) {
+            //     callback()
+            // }
+            if ((target !== innerRef.current)) {
                 callback()
             }
 
@@ -29,23 +34,22 @@ function useOuterClick(callback: () => void): any {
 }
 
 
-
-function getWindowDimensions() {
-    const { innerHeight: height, innerWidth: width } = window
-    return { width, height }
-}
-
 interface WindowDimentions {
     width: number;
     height: number;
 }
 
-function DropdownAction() {
+function DropdownAction({index}: {index: number}) {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [windowDimensions, setWindowDimensions] = useState<WindowDimentions>({ width: 0, height: 0 });
     const [elementX, setElementX] = useState<number>(0);
 
     useEffect(() => {
+        const { innerHeight: height, innerWidth: width } = window
+        let wd: WindowDimentions = {
+            width, height
+        }
+        setWindowDimensions(wd)
         function handleResize() {
             const { innerHeight: height, innerWidth: width } = window
             let wd: WindowDimentions = {
@@ -65,17 +69,18 @@ function DropdownAction() {
 
     const toggleOpen = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         let elX = ref.current.getBoundingClientRect().left
-        console.log(ref);
+
 
         let r = windowDimensions.width - elX - ref.current.getBoundingClientRect().width;
         setElementX(r)
-        console.log(windowDimensions.width, elX, ref.current.getBoundingClientRect(), elementX);
+        console.log(windowDimensions.width, elX, ref.current.getBoundingClientRect().left, elementX, r);
+        console.log(elementX);
         setIsOpen(current => !current)
     }
     return (
         <div className='inline-block text-left'>
-            <button ref={ref} onClick={(e) => { toggleOpen(e); }} type="button" aria-expanded="true" aria-haspopup="true" className=''>
-                <span className="material-icons-round text-sm">
+            <button onClick={(e) => { toggleOpen(e); }} data-index={index} type="button" aria-expanded="true" aria-haspopup="true" className=''>
+                <span ref={ref} className="material-icons-round text-sm" >
                     more_vert
                 </span>
             </button>
@@ -93,7 +98,7 @@ function DropdownAction() {
                         <span className='material-icons-round text-sm mr-2'>info</span>
                         <span>Detail</span>
                     </a>
-                    <hr/>
+                    <hr />
                     <a href='#' onClick={() => { }} className="flex items-center justify-start text-gray-600 w-full px-4 py-2 text-left text-xs hover:bg-slate-100" role="menuitem" tabIndex={-1} id="menu-item-3">
                         <span className='material-icons-round text-sm mr-2'>collections</span>
                         <span>Gambar</span>
